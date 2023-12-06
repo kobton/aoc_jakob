@@ -1,19 +1,18 @@
-## Day 6 solution template
+# Java with gradle
+Java was originally designed for interactive television, but it was too advanced technology for the digital cable television industry at the time. Java had limited success as applets on the web and also powered some desktop applications, but eventually found a welcome home as a backend server language. Along the way, a chip that ran java natively was also developed.
 
-This shows the basics of the setup needed to participate in the Cygnified AoC with your solution for a given day (in this case day 6 because we are in the `day06` directory). **The directory structure is important.**
+The principles for creating Java programming were "Simple, Robust, Portable, Platform-independent, Secured, High Performance, Multithreaded, Architecture Neutral, Object-Oriented, Interpreted, and Dynamic". The inspiration was a C++-like syntax, without the most obvious flaws, and a simple Smalltalk-like Object Oriented design. Sun also realised that the time for charging money for programming languages had passed, so Java was released for free (as in beer), and Java is now our most beloved workhorse.
 
-The setup must include a `Dockerfile` that includes the solution source code. Your `Dockerfile` must include a `COPY` statement that copies `input.txt` (and possibly other files) from the root of `day02` (in this case) into your image. That is, we will use your individual `puzzle input` provided by Advent of Code when analysing your solution.
+If you want to run java locally you will need a jvm. If you don't have a jvm, you can [get one here](https://adoptopenjdk.net/)
 
-From all this magic setup, the Cygnified AoC-engine can create a valid image and you're in the game (and that's awesome).
+## How to run tests
+Use the integrated test runner in your IDE or run `./gradlew test`
 
-Shell scripting is fun and all, but we have provided examples for many different languages to get you up and running with your favourite weapons, have a look [here](../examples)
+## How to build and run
+You could just type `./gradlew run`
 
-### How to build
-`docker build -t aoc06 .`
+Alternatively, you can run a single file main program directly by `java src/main/java/aoc/App.java`. If you have more source
+files you have to compile first
 
-### How to run
-The environment variable `part` specifies which part of the solution to run.
-
-`docker run -e part=part1 aoc06`
-
-**As this is just a template**, all that `part1` and `part2` does is to print the first and last line of `input.txt`, respectively. For a more realistic example, have a look [here](../examples).
+## Docker
+According to the [Cygni AoC procedure](https://github.com/cygni/aoc_example)
